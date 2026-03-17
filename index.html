@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WaterPage - Ledger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AquaPage</h1>
+    <p>Digital Water Ledger for everyone</p>
+  </header>
+
+  <section id="customer-view" style="display:none;">
+    <div class="cname">
+      <h2 id="customer-name"></h2>
+      </div>
+    <div class="balance-box">
+      <p>Remaining Balance:</p>
+      <h1 id="balance">0 units</h1>
+    </div>
+
+    <div class="actions">
+      <button onclick="addPayment()">Add Prepaid units of Water </button>
+      <button onclick="recordCollection()">Collection Records</button>
+    </div>
+
+    <h3 class= "newcustomer">Transaction History</h3>
+    <ul id="history-list"></ul>
+    <button id="reset-btn" style="background: #dc3545; margin-top: 20px;">Reset / Start New Customer</button>
+  </section>
+
+  <section id="add-customer", class= "add-customer">
+    <h2 class = "newcustomer">Add New Customer</h2>
+    <input id="new-name" placeholder="Customer Name", class= "input" />
+    <input id="new-phone" placeholder="Phone (optional)", class= "input" />
+    <input id="initial-units" type="number" placeholder="Prepaid Units (e.g. 10)", class= "input" />
+    <button onclick="createCustomer()">Create & Start Ledger</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
